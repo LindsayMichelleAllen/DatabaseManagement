@@ -1,0 +1,45 @@
+﻿<Window x:Class="pagetest.UserPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pagetest"
+        mc:Ignorable="d"
+        Title="UserPage" Height="722.2" Width="1138" WindowStartupLocation="Manual" Left="0" Top="0">
+    <Grid RenderTransformOrigin="0.555,0.488">
+        <TextBox x:Name="userSearchInput_textbox" HorizontalAlignment="Left" Height="25" Margin="67,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" FontSize="18" KeyUp="UserSearchInput_textbox_KeyUp"/>
+        <Label x:Name="label" Content="Enter First Name:" HorizontalAlignment="Left" Margin="85,69,0,0" VerticalAlignment="Top" Height="25" Width="114" RenderTransformOrigin="0.52,0.221"/>
+        <DataGrid x:Name="userSearchOutput_datagrid" HorizontalAlignment="Left" Height="107" Margin="297,46,0,0" VerticalAlignment="Top" Width="200" SelectionChanged="UserSearchOutput_datagrid_SelectionChanged" RowHeaderWidth="0" HorizontalScrollBarVisibility="Disabled"/>
+        <Label x:Name="label2" Content="Friends:" HorizontalAlignment="Left" Margin="569,60,0,0" VerticalAlignment="Top" Height="34" Width="85"/>
+        <DataGrid x:Name="businessFavorites_datagrid" HorizontalAlignment="Left" Height="196" Margin="55,379,0,0" VerticalAlignment="Top" Width="485" RowHeaderWidth="24" SelectionUnit="Cell" SelectionChanged="BusinessFavorites_datagrid_SelectionChanged"/>
+        <Label x:Name="label3" Content="User Information:" HorizontalAlignment="Left" Margin="230,187,0,0" VerticalAlignment="Top" Height="30" Width="134" FontSize="13"/>
+        <DataGrid x:Name="friendsList_datagrid" HorizontalAlignment="Left" Height="162" Margin="569,108,0,0" VerticalAlignment="Top" Width="200" ColumnHeaderHeight="25" RowHeaderWidth="0" SelectionChanged="FriendsList_datagrid_SelectionChanged" HorizontalScrollBarVisibility="Disabled"/>
+        <Label x:Name="label1" Content="Name:" HorizontalAlignment="Left" Margin="92,235,0,0" VerticalAlignment="Top" FontSize="10" Height="22" Padding="5,1,5,5" Width="46"/>
+        <TextBox x:Name="name_textbox" HorizontalAlignment="Left" Height="19" Margin="138,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141" FontSize="10"/>
+        <Label x:Name="label4" Content="Stars:" HorizontalAlignment="Left" Margin="92,263,0,0" VerticalAlignment="Top" FontSize="10" Padding="5,1,5,5" Height="21" Width="39"/>
+        <TextBox x:Name="stars_textbox" HorizontalAlignment="Left" Height="18" Margin="138,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="48"/>
+        <Label x:Name="label5" Content="Fans:" HorizontalAlignment="Left" Margin="192,263,0,0" VerticalAlignment="Top" Height="18" Padding="1" Width="34" FontSize="10"/>
+        <TextBox x:Name="fans_textbox" HorizontalAlignment="Left" Height="18" Margin="226,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="53" FontSize="10"/>
+        <Label x:Name="label6" Content="Yelping Since:" HorizontalAlignment="Left" Margin="92,287,0,0" VerticalAlignment="Top" Height="19" FontSize="10" Padding="0" Width="74"/>
+        <TextBox x:Name="yelpingSince_textbox" HorizontalAlignment="Left" Height="19" Margin="172,287,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="107" FontSize="10"/>
+        <Label x:Name="label7" Content="Votes:" HorizontalAlignment="Left" Margin="303,231,0,0" VerticalAlignment="Top" Height="19" Padding="0" FontSize="10" Width="31"/>
+        <Label x:Name="label8" Content="Funny:" HorizontalAlignment="Left" Margin="347,231,0,0" VerticalAlignment="Top" Height="19" FontSize="10" Padding="0" Width="30"/>
+        <Label x:Name="label8_Copy" Content="Cool:" HorizontalAlignment="Left" Margin="400,231,0,0" VerticalAlignment="Top" Height="19" FontSize="10" Padding="0" Width="25"/>
+        <Label x:Name="label8_Copy1" Content="Useful:" HorizontalAlignment="Left" Margin="450,231,0,0" VerticalAlignment="Top" Height="19" FontSize="10" Padding="0" Width="35"/>
+        <TextBox x:Name="funny_textbox" HorizontalAlignment="Left" Height="18" Margin="343,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
+        <TextBox x:Name="cool_textbox" HorizontalAlignment="Left" Height="18" Margin="394,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
+        <TextBox x:Name="useful_textbox" HorizontalAlignment="Left" Height="18" Margin="447,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
+        <Label x:Name="label7_Copy" Content="Location:" HorizontalAlignment="Left" Margin="303,278,0,0" VerticalAlignment="Top" Height="19" Padding="0" FontSize="10" Width="57"/>
+        <Label x:Name="label8_Copy2" Content="latitude:" HorizontalAlignment="Left" Margin="324,299,0,0" VerticalAlignment="Top" Height="19" FontSize="10" Padding="0" Width="43"/>
+        <Label x:Name="label8_Copy3" Content="longitude:" HorizontalAlignment="Left" Margin="314,323,0,0" VerticalAlignment="Top" Height="19" FontSize="10" Padding="0" Width="53"/>
+        <TextBox x:Name="latitude_textbox" HorizontalAlignment="Left" Height="19" Margin="375,299,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="107" FontSize="10" KeyDown="Latitude_textbox_KeyDown"/>
+        <TextBox x:Name="longitude_textbox" HorizontalAlignment="Left" Height="19" Margin="375,323,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="107" FontSize="10" KeyDown="Longitude_textbox_KeyDown"/>
+        <Label x:Name="label9" Content="Business Favorites:" HorizontalAlignment="Left" Margin="26,353,0,0" VerticalAlignment="Top" Width="134"/>
+        <Button x:Name="removeFromFavorites_button" Content="Remove From Favorites" HorizontalAlignment="Left" Margin="186,638,0,0" VerticalAlignment="Top" Width="183" Click="RemoveFromFavorites_button_Click"/>
+        <Label x:Name="label10" Content="Reviews By Friends:" HorizontalAlignment="Left" Margin="569,323,0,0" VerticalAlignment="Top" Width="126"/>
+        <DataGrid x:Name="friendsReviews_datagrid" HorizontalAlignment="Left" Height="218" Margin="569,362,0,0" VerticalAlignment="Top" Width="528" ColumnHeaderHeight="25" RowHeaderWidth="0"/>
+        <Button x:Name="businessPageButton" Content="Switch To Business View" HorizontalAlignment="Left" Margin="746,638,0,0" VerticalAlignment="Top" Width="175" Click="BusinessPageButton_Click"/>
+        <Label x:Name="label_Copy" Content="Select User ID" HorizontalAlignment="Left" Margin="348,16,0,0" VerticalAlignment="Top" Height="25" Width="114" RenderTransformOrigin="0.52,0.221"/>
+
+    </Grid>
+</Window>

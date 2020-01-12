@@ -1,0 +1,46 @@
+﻿<Window x:Class="WPF_App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        mc:Ignorable="d"
+        Title="MainWindow" Height="722.2" Width="1138" WindowStartupLocation="Manual" Left="0" Top="0" >
+    <Grid>
+        <ComboBox x:Name="StateList" HorizontalAlignment="Left" Margin="338,32,0,0" VerticalAlignment="Top" Width="242" Height="36" FontSize="18" SelectionChanged="StateList_SelectionChanged_1"/>
+        <Label x:Name="label" Content="State" HorizontalAlignment="Left" Margin="233,32,0,0" VerticalAlignment="Top" Height="36" Width="65" RenderTransformOrigin="0.808,0.861" FontSize="18"/>
+        <DataGrid x:Name="businessGrid" HorizontalAlignment="Left" Height="326" Margin="34,228,0,0" VerticalAlignment="Top" Width="616" FontSize="18" SelectionChanged="BusinessGrid_SelectionChanged" BorderBrush="#FF001223"/>
+        <ComboBox x:Name="CityList1" HorizontalAlignment="Left" Margin="338,98,0,0" VerticalAlignment="Top" Width="242" Height="36" SelectionChanged="ComboBox_SelectionChanged"/>
+        <ComboBox x:Name="ZipList" HorizontalAlignment="Left" Margin="338,164,0,0" VerticalAlignment="Top" Width="242" Height="36" SelectionChanged="ComboBox_SelectionChanged_1"/>
+        <Label x:Name="label1_Copy" Content="City" HorizontalAlignment="Left" Margin="233,98,0,0" VerticalAlignment="Top" Height="36" Width="65" FontSize="18"/>
+        <Label x:Name="label2" Content="Zipcode" HorizontalAlignment="Left" Margin="233,161,0,0" VerticalAlignment="Top" Height="39" Width="82" FontSize="18"/>
+        <Label x:Name="label3" Content="Categories" HorizontalAlignment="Left" Margin="794,10,0,0" VerticalAlignment="Top" Height="36" Width="106" FontSize="18"/>
+        <ScrollViewer HorizontalAlignment="Left" Margin="633,46,0,0" VerticalAlignment="Top" Height="154" Width="416" CanContentScroll="True">
+            <StackPanel x:Name="category_StackPanel" Height="154" Width="416"/>
+
+        </ScrollViewer>
+
+        <DataGrid x:Name="dataGrid1" HorizontalAlignment="Left" Height="326" Margin="673,228,0,0" VerticalAlignment="Top" Width="433" BorderBrush="#FF000102"/>
+        <TextBox x:Name="business_name" HorizontalAlignment="Left" Height="7" Margin="34,572,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="10" BorderBrush="White"/>
+        <TextBox x:Name="star_rating" HorizontalAlignment="Left" Height="10" Margin="64,572,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="10" BorderBrush="#FFFBFCFD"/>
+        <TextBox x:Name="review_content" HorizontalAlignment="Left" Height="10" Margin="104,572,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="10" BorderBrush="#FFF4F5F7"/>
+        <TextBox x:Name="review_id" HorizontalAlignment="Left" Height="10" Margin="167,582,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="10" BorderBrush="#FFF8FAFF"/>
+        <TextBox x:Name="review_content1" HorizontalAlignment="Left" Height="76" Margin="46,588,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="626" BorderBrush="#FF080007"/>
+        <Label x:Name="star_label" Content="Star Rating:" HorizontalAlignment="Left" Margin="712,606,0,0" VerticalAlignment="Top" Height="36" Width="114" FontSize="18"/>
+        <ComboBox x:Name="star_input" HorizontalAlignment="Left" Margin="832,606,0,0" VerticalAlignment="Top" Width="50" Height="36"/>
+        <Button x:Name="submit_button" Content="Submit New Review" HorizontalAlignment="Left" Margin="922,588,0,0" VerticalAlignment="Top" Width="162" Height="26" BorderBrush="#FF0A0000" Background="#FFDDDDDD" Click="Submit_button_Click"/>
+        <Separator HorizontalAlignment="Left" Height="29" Margin="34,559,0,0" VerticalAlignment="Top" Width="1072" RenderTransformOrigin="0.503,-0.414"/>
+        <Button x:Name="checkin_button" Content="Just Check-in" HorizontalAlignment="Left" Margin="922,636,0,0" VerticalAlignment="Top" Width="162" Height="26" BorderBrush="#FF040000" Click="Checkin_button_Click"/>
+        <Button x:Name="userViewButton" Content="Switch To User View" HorizontalAlignment="Left" Margin="34,51,0,0" VerticalAlignment="Top" Width="143" FontSize="14" Click="UserViewButton_Click"/>
+        <Button x:Name="button1" Content="Favorite" HorizontalAlignment="Left" Margin="34,81,0,0" VerticalAlignment="Top" Width="143" Height="24" Click="Button1_Click"/>
+        <Button x:Name="button" Content="View Check-In Chart" HorizontalAlignment="Left" Margin="34,15,0,0" VerticalAlignment="Top" Width="143" RenderTransformOrigin="-2.84,-0.837" Height="27" Click="Button_Click"/>
+        <ComboBox x:Name="sortlist" HorizontalAlignment="Left" Margin="34,164,0,0" VerticalAlignment="Top" Width="177" Height="34" SelectionChanged="ComboBox_SelectionChanged_2">
+            <ComboBoxItem Content="Name" HorizontalAlignment="Left" Width="175"/>
+            <ComboBoxItem Content="Stars" HorizontalAlignment="Left" Width="175"/>
+            <ComboBoxItem Content="Review Count" HorizontalAlignment="Left" Width="175"/>
+            <ComboBoxItem Content="# of Check-Ins" HorizontalAlignment="Left" Width="175"/>
+        </ComboBox>
+        <Label x:Name="label1" Content="Sort Businesses by:" HorizontalAlignment="Left" Margin="34,133,0,0" VerticalAlignment="Top" Height="26" Width="150"/>
+
+    </Grid>
+</Window>
